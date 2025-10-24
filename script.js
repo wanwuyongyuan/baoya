@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const userInput = (keyInput.value || '').trim().toLowerCase();
     const correctPassword = 'fuzejiaren'; // 正确密码（明文）
     if (userInput === correctPassword) {
-      modalContent.textContent = '解锁成功！可以安全继续收集线索。';
+      modalContent.textContent = '成功登入，欢迎回来。';
       keyInput.style.display = 'none';
       keySubmit.style.display = 'none';
 
