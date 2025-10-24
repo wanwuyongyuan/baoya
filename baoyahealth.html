@@ -35,32 +35,13 @@
     </span>
   </div>
 
+  <!-- 员工登录提示 -->
+  <p id="employee-hint" style="display:none; color: #e74c3c; font-size: 0.9em;">员工登录请使用手机号</p>
+
   <button onclick="login()">登录</button>
 
   <span id="switch" onclick="toggleMode()">切换到员工入口</span>
 </div>
-
-<!-- JS 示例 -->
-<script>
-function login() {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-  alert(`用户名: ${username}, 密码: ${password}`);
-}
-
-function toggleMode() {
-  const title = document.getElementById('login-title');
-  const switchBtn = document.getElementById('switch');
-  if (title.innerText.includes('普通用户')) {
-    title.innerText = '员工登录';
-    switchBtn.innerText = '切换到普通用户入口';
-  } else {
-    title.innerText = '普通用户登录';
-    switchBtn.innerText = '切换到员工入口';
-  }
-}
-</script>
-
 
 <script>
   let isEmployeeMode = false;
@@ -75,13 +56,18 @@ function toggleMode() {
     isEmployeeMode = !isEmployeeMode;
     const title = document.getElementById("login-title");
     const switchText = document.getElementById("switch");
+    const hint = document.getElementById("employee-hint");
 
     if (isEmployeeMode) {
       title.textContent = "员工登录入口";
       switchText.textContent = "切换回普通入口";
+      hint.style.display = "block"; // 显示提示
+      document.getElementById("username").placeholder = "请输入手机号";
     } else {
       title.textContent = "普通用户登录";
       switchText.textContent = "切换到员工入口";
+      hint.style.display = "none"; // 隐藏提示
+      document.getElementById("username").placeholder = "请输入账号";
     }
   }
 
@@ -107,6 +93,7 @@ function toggleMode() {
     }
   }
 </script>
+<!-- 登录模块结束 -->
 <!-- 登录模块结束 -->
 
 </body>
