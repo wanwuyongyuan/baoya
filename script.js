@@ -58,6 +58,7 @@ window.addEventListener('DOMContentLoaded', () => {
   keyInput.style.display = 'block';
   keySubmit.style.display = 'block';
   keyInput.value = '';
+   
   keyInput.placeholder = '恺撒L3:IXCHMLDUHQ'; // 保留原来的提示
   keyInput.focus();
 
