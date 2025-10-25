@@ -10,12 +10,8 @@ const breachArea = document.getElementById('breachArea');
 
 let attempts = 0;
 
-// 正确顺序
-// 正确顺序（使用二进制风格显示数字）
-const correctSequence = ['Δ10011', 'Θ11100', 'Σ100101']; // 19, 28, 37
-
-// 包含干扰项
-let codes = ['Δ10011', 'Θ11100', 'Σ100101', 'Λ101110', 'Ξ110111', 'Π1000000']; // 46, 55, 64
+const correctSequence = ['Δ10011', 'Θ11100', 'Σ100101']; 
+let codes = ['Δ10011', 'Θ11100', 'Σ100101', 'Λ01001010', 'Ξ1111000', 'Π001011']; 
 
 // 随机打乱数组
 function shuffle(array) {
