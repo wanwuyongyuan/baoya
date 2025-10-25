@@ -136,6 +136,8 @@ p {
    =========================================== */
 .password-wrapper {
   position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 .tooltip {
@@ -151,30 +153,32 @@ p {
   line-height: 18px;
   text-align: center;
   font-size: 11px;
-  vertical-align: middle;
+  user-select: none;
+  position: relative;
 }
 
 .tooltiptext {
   visibility: hidden;
-  min-width: 120px;
-  max-width: 220px;
+  min-width: 160px;
+  max-width: 240px;
   background-color: #333;
   color: #fff;
   text-align: center;
   border-radius: 6px;
   padding: 6px 10px;
   position: absolute;
-  z-index: 1;
-  top: -5px;
+  z-index: 10;
+  top: 28px; /* ✅ 下移一点，避免贴太近 */
   left: 50%;
   transform: translateX(-50%);
   font-size: 11px;
-  white-space: nowrap;
+  white-space: normal;
   opacity: 0;
   transition: opacity 0.2s;
 }
 
-.tooltip:hover .tooltiptext {
+/* 点击激活时显示 */
+.tooltip.active .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
