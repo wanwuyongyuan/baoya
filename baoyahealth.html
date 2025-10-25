@@ -95,7 +95,22 @@
   }
 </script>
 <!-- 登录模块结束 -->
-<!-- 登录模块结束 -->
+    
+ <script>
+    document.addEventListener('click', function (event) {
+      const tooltips = document.querySelectorAll('.tooltip');
+
+      tooltips.forEach(t => {
+        if (t.contains(event.target)) {
+ 
+          t.classList.toggle('active');
+        } else {
+         
+          t.classList.remove('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
